@@ -1,0 +1,1 @@
+Esta será una sección dedicada a la comprensión del svg

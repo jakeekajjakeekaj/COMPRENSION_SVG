@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion SVG</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Breve Ejemplo 1 -->
+    <!-- No se puede comentar dentro del svg, pero la estructura es:
+    width: (se puede meter cualquier unidad como con cualquier width)
+    height: (Lo mismo que con el width)
+    viewBox:("desconocido - desconocido - indica en coordenadas x lo que es (En formato de columnas) - indica en coordenadas y lo que es (En formato de filas)"), para el tema de las coordenadas, uno define el total, es decir funciona como el grid y sus fr
+
+    <rect : (Indica la figura)
+    x: (Indica la coordenada en que se iniciará a dibujar, basado en las dimensiones del svg)
+    y: (Indica la coordenada e que se iniciará a dibujar, basado en las dimensiones del svg)
+    width: (Indica el ancho que tendrá la figura basándose en lo declarado dentro del viewBox, FUNCIONA COMO GRID)
+    height: (Indica la altura que tendrá la figura basándose en lo declarado dentro del viewBox, FUNCIONA COMO GRID)
+    -->
+    <svg
+    width="120px"
+    height="120px"
+    viewBox="0 0 2 1">
+        <rect
+        x="0"
+        y="0"
+        width="1"
+        height="0.5"></rect>
+    </svg>
+
+<br>
+
+    <!-- EJEMPLO 2 -->
+    <svg
+    width="150px"
+    height="100px"
+    viewBox="0 0 3 2"
+    class="flag">
+        <rect width="1" height="2" x="0" fill="#008d46" />
+        <rect width="1" height="2" x="1" fill="#fff" />
+        <rect width="1" height="2" x="2" fill="#d2232c" />
+    </svg>
+
+<br>
+
+    <!-- EJEMPLO 3 
+    se pueden crear rect PARA LOS RECTANGULOS, circle PARA LOS CIRCULOS y polygon PARA LOS POLIGONOS, COMO PARA CREAR TRIÁNGULOS POR EJEMPLO, sin embargo también se pueden crear formas de manera abierta, y esto es con path
+
+    d: Esta viene de Draw, y funciona con coordenadas y comandos, de los más basicos es M de Move y lo que el sigue son coordenadas en x, y
+    Si se escribe M es con la posición absoluta, mientras que si se escribe m es relativa al último punto
+
+    Sin embargo esto nadamás sería un punto, para poder comenzar a dibujar algo se tienen que usar los comandos l para comenar a dibujar una linea seguida de las coordenadas
+
+    H Horizontal Lines
+    V Vertical lines
+
+    Para poder dibujar curvas se utilizar C para una curva cúbica y Q para una curva cuadrática
+    -->
+    <svg
+    width="200"
+    height="200"
+    viewBox="0 0 100 100">
+        <path d="M50 0 L100 100 L0 100"></path>
+    </svg>
+    
+</body>
+</html>
